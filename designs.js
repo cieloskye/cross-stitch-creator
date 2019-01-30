@@ -7,7 +7,7 @@ const inputHeight = $('#inputHeight');
 const inputWeight = $('#inputWeight');
 const colorPicker = $('#colorPicker');
 const pixelCanvas = $('#pixelCanvas');
-const submit = $('input type="submit"');
+const submit = $('input[type="submit"]');
 
 function makeGrid() {
 
@@ -20,6 +20,6 @@ function makeGrid() {
 };
 
 //button
-submit.on('click', (event) => {
-
+submit.on('click', function (event) {
+	console.log('submit listen test');
 });
