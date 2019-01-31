@@ -3,8 +3,8 @@
 // When size is submitted by the user, call makeGrid()
 
 
-const inputHeight = $('#inputHeight');
-const inputWeight = $('#inputWeight');
+const height = $('#inputHeight');
+const weight = $('#inputWeight');
 const colorPicker = $('#colorPicker');
 const pixelCanvas = $('#pixelCanvas');
 const submit = $('input[type="submit"]');
@@ -20,6 +20,8 @@ function makeGrid() {
 };
 
 //button
-submit.on('click', function (event) {
+submit.on('click', function(event) {
+
+	event.preventDefault();
 	console.log('submit listen test');
 });
