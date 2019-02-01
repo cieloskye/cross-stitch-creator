@@ -14,8 +14,8 @@ function makeGrid(height, width) {
 	};
 
 	//Colors in pixel boxes
-	pixelCanvas.on('click', 'td', () => {
-	 	$(this).css('background-color', c$('#colorPicker').val());
+	$('#pixelCanvas').on('click', 'td', function() {
+	 	$(this).css('background-color', $('#colorPicker').val());
 	});
 };
 
