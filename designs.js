@@ -1,8 +1,3 @@
-// Select color input
-// Select size input
-// When size is submitted by the user, call makeGrid()
-
-
 
 const colorPicker = $('#colorPicker');
 const pixelCanvas = $('#pixelCanvas');
