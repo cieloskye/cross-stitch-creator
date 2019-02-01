@@ -1,10 +1,10 @@
 
-//const submit = ;
+const pixelCanvas = $('#pixelCanvas');
 
 //This will create the canvas once user input is received.
 function makeGrid(height, width) {
 	const colorPicker = $('#colorPicker');
-	const pixelCanvas = $('#pixelCanvas');
+	
 
 
 
@@ -31,11 +31,11 @@ $('input[type="submit"]').on('click', (event) => {
 	event.preventDefault();
 
 	//pulls in height & Width data
-	let height = $('#inputHeight').val();
-	let width = $('#inputWidth').val();
+	const height = $('#inputHeight').val();
+	const width = $('#inputWidth').val();
 	
 	//Clears Canvas
- 	$('#pixelCanvas').empty();
+ 	pixelCanvas.empty();
 
  	//Calls function
 	makeGrid(height, width);
