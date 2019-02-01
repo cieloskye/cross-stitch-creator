@@ -1,11 +1,12 @@
 
-const colorPicker = $('#colorPicker');
-const pixelCanvas = $('#pixelCanvas');
-const submit = $('input[type="submit"]');
+
+
 
 function makeGrid(height, width) {
+	const colorPicker = $('#colorPicker');
+	const pixelCanvas = $('#pixelCanvas');
 
-console.log('makeGrid, make that grid!');
+	console.log('makeGrid, make that grid!');
 
  //Clears Canvas
  pixelCanvas.innerHTML = '';
@@ -16,11 +17,15 @@ console.log('makeGrid, make that grid!');
   Each cell should have an event listener that sets the 
   background color of the cell to the selected color.
    */
-for(let N = 0, N < gridHeight, i++) {
 
+
+for(let N = 0, N < gridHeight, i++) {
+	pixelCanvas.append($());
 }
 
-for(let M = 0, M < gridWidth, M++)
+for(let M = 0, M < gridWidth, M++){
+	$().last().append($());
+}
 
 pixelCanvas.on.('click', td, () => {
 
@@ -36,7 +41,7 @@ pixelCanvas.on.('click', td, () => {
 
 //button
 submit.on('click', (event) => {
-
+	const submit = $('input[type="submit"]');
 	event.preventDefault();
 	console.log('submit listen test');
 
