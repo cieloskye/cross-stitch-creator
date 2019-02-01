@@ -6,21 +6,18 @@ function makeGrid(height, width) {
 	const colorPicker = $('#colorPicker');
 	const pixelCanvas = $('#pixelCanvas');
 
-	
 
-
-	console.log('makeGrid, make that grid!');
-
- 	//Clears Canvas
- 	pixelCanvas.innerHTML = '';
 
 	//Creates canvas
 	for(let n = 0; n < height; n++) {
 		pixelCanvas.append($('<tr></tr>'));
-	};
+		console.log($('#inputHeight'));
 
-	for(let m = 0; m < width; m++){
-		$('tr').last().append($('<td></td>'));
+		for(let m = 0; m < width; m++){
+			$('tr').last().append($('<td></td>'));
+			console.log($('#inputWidth'));
+
+		};
 	};
 
 //Handles pixel color
@@ -31,12 +28,16 @@ function makeGrid(height, width) {
 
 //Handle the submit button click, and call makeGrid().
 $('input[type="submit"]').on('click', (event) => {
-	
 	event.preventDefault();
-	console.log('submit listen test');
 
-	const height = $('#inputHeight').val();
-	const weight = $('#inputWeight').val();
+	//pulls in height & Width data
+	let height = $('#inputHeight').val();
+	let width = $('#inputWidth').val();
+	
+	//Clears Canvas
+ 	$('#pixelCanvas').empty();
 
-	makeGrid();
+ 	//Calls function
+	makeGrid(height, width);
+	console.log(height, width);
 });
