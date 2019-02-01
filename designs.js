@@ -1,5 +1,9 @@
 
+
+
+//GLOBAL VARIABLES
 const pixelCanvas = $('#pixelCanvas');
+let stitch = true;
 
 //This will create the canvas once user input is received.
 function makeGrid(height, width) {
@@ -15,13 +19,18 @@ function makeGrid(height, width) {
 
 	//Colors in pixel boxes
 	$('#pixelCanvas').on('click', 'td', function(c) {
-	 	$(this).css('background-color', $('#colorPicker').val());
-
+	 	if(stitch === true) {
+			$(this).css('background-color', $('#colorPicker').val());
+		} else {
+			$(this).css('background-color', '');
+		}
+	 	
 	});
 };
 
 //Handle the submit button click, and call makeGrid().
 $('input[type="submit"]').on('click', (event) => {
+	
 	event.preventDefault();
 
 	//pulls in height & Width data
@@ -33,5 +42,18 @@ $('input[type="submit"]').on('click', (event) => {
 
  	//Calls function
 	makeGrid(height, width);
-	//console.log(height, width);
 });
+
+
+$('input[name="needle"]').on('change', function() {
+	if($(this).val() === 'stitch') {
+		stitch = true;
+	} 
+
+	else if($(this).val() === 'unthread') {
+		stitch = false;
+	};
+});
+
+
+
