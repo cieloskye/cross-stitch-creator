@@ -16,6 +16,12 @@ console.log('makeGrid, make that grid!');
   Each cell should have an event listener that sets the 
   background color of the cell to the selected color.
    */
+for(let N = 0, N < gridHeight, i++) {
+
+}
+
+for(let M = 0, M < gridWidth, M++)
+
 pixelCanvas.on.('click', td, () => {
 
 
