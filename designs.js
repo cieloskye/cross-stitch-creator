@@ -1,7 +1,7 @@
 
 
 
-
+//This will create the canvas once user input is received.
 function makeGrid(height, width) {
 	const colorPicker = $('#colorPicker');
 	const pixelCanvas = $('#pixelCanvas');
@@ -11,22 +11,16 @@ function makeGrid(height, width) {
  //Clears Canvas
  pixelCanvas.innerHTML = '';
 
- /* N by M tr & td
-  Use JavaScript loops to dynamicallycreate the 
-  table based on user input. 
-  Each cell should have an event listener that sets the 
-  background color of the cell to the selected color.
-   */
-
-
-for(let N = 0, N < gridHeight, i++) {
-	pixelCanvas.append($());
+//Creates canvas
+for(let n = 0, n < gridHeight, n++) {
+	pixelCanvas.append($('<tr></tr>'));
 }
 
-for(let M = 0, M < gridWidth, M++){
-	$().last().append($());
+for(let m = 0, m < gridWidth, m++){
+	$('tr').last().append($('<td></td>'));
 }
 
+//Handles pixel color
 pixelCanvas.on.('click', td, () => {
 
 
@@ -39,7 +33,7 @@ pixelCanvas.on.('click', td, () => {
 	//for while
 };
 
-//button
+//Handle the submit button click, and call makeGrid().
 submit.on('click', (event) => {
 	const submit = $('input[type="submit"]');
 	event.preventDefault();
